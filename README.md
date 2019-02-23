@@ -47,6 +47,29 @@ p.s. 对curve的操作，与Animation类似，详见https://docs.unity3d.com/Man
 * Current Time。 当前的时间点（运行时出现）
 * Bindings。 track需要绑定的物体
 
-## Playable Track 扩展
+## Playable 扩展
 
 官方工具：https://assetstore.unity.com/packages/essentials/default-playables-95266
+
+自动化脚本生成器 + 常用扩展（灯光、导航、位移、文本、变速、视频等）
+
+### Timeline Playable Wizard
+
+1. 通用设置
+
+        * Playable Name。会以此生成附带各种后缀（Behaviour/Clip/MixerBehaviour/Track/Drawer）的脚本。
+        * Track Binding。Track要绑定的类型。
+        * Track Color。Track在编辑器中的颜色。
+        * Show Help。展示参数提示。
+
+1. 全自动模式：Standard Blend Playable
+
+        * Default Values。默认值。
+        * Standard Blend Playable Properties。可以在timeline中控制的参数。
+
+1. 自定义模式：Normal Playable
+
+        * Exposed References。外部引用，可以引用场景中的物体。（以位移为例，可以是目标物体）
+        * Behaviour Variables。行为参数，自定义行为中需要的参数。（以位移为例，可以是速度）
+        * Clip Caps。Clip是否可以被混合等编辑特性。详见 https://docs.unity3d.com/ScriptReference/Timeline.ClipCaps.html
+        * Create Drawer?。是否创建Drawer。
